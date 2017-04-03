@@ -1,3 +1,11 @@
+/**
+ * 
+ * @author Lucas Guasselli de Moraes
+ * @since 02/04/2017
+ * @version 1.0 
+ * 
+ */
+
 package view;
 
 import java.io.File;
@@ -15,6 +23,7 @@ public class GerenciadorUI {
 		
 	public static void main(String[] args) {
 
+		//MENU
 		Menu menu = new Menu();
 		
 		Opcao val1 = new Opcao("Mudar valor 1 para 2");
@@ -25,13 +34,17 @@ public class GerenciadorUI {
 		menu.addOption(val2);
 		menu.addOption(sair);
 		
+		//matrizes que recebem dados dos arquivos txt
 		int[][] matriz1 = new int[11][11];
 		int[][] matriz2 = new int[11][11];
 		int[][] matriz3 = new int[11][11];
 		
+		//metodo de importacao dos dados
 		lerArquivo(matriz1, matriz2 , matriz3);
+		
 		verMatriz(matriz1);
 		
+		try{
 		do{
 		menu.show();
 			
@@ -44,11 +57,13 @@ public class GerenciadorUI {
 				break;
 			default:
 					System.exit(0);
-				break;
-			
+				break;			
 		}//fecha switch-case
 		
 		}while(true);
+		}catch (Exception e){
+			System.out.println("INSIRA UM NUMERO DE 0 A 2");
+		}//FECHA TRY-CATCH
 	}//fecha main
 
 

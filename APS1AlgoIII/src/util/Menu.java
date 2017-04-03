@@ -1,3 +1,10 @@
+/**
+ * 
+ * @author Lucas Guasselli de Moraes
+ * @since 02/04/2017
+ * @version 1.0 
+ * 
+ */
 package util;
 
 
